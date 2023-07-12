@@ -587,12 +587,24 @@
         </div>
         <div class="container-form">
           <form class="form-footer" name="email_address" autocomplete="off">
-              <label class="label-subscribe">Subscribe
-                <input class="form-footer-input" type="text" name="input-email" placeholder="E-mail"/>
-              </label>
-              <button class="form-button-footer" type="submit">Subscribe 
-                <svg class="form-footer-frame">
-                <use href="./images/icons.svg#icon-frame" width="24" height="24"></use>
+            <label class="label-subscribe"
+              >Subscribe
+              <input
+                class="form-footer-input"
+                type="text"
+                name="input-email"
+                placeholder="E-mail"
+                maxlength="200"
+              />
+            </label>
+            <button class="form-button-footer" type="submit">
+              Subscribe
+              <svg class="form-footer-frame">
+                <use
+                  href="./images/icons.svg#icon-frame"
+                  width="24"
+                  height="24"
+                ></use>
               </svg>
             </button>
           </form>
@@ -604,9 +616,51 @@
       <div class="modal">
         <button data-modal-close type="button" class="modal-button">
           <svg class="svg-on-button" width="8" height="8">
-            <use class="use-button-footer" href="./images/icons.svg#icon-close"></use>
+            <use
+              class="use-button-footer"
+              href="./images/icons.svg#icon-close"
+            ></use>
           </svg>
         </button>
+        <div class="modal-window-form">
+          <form class="modal-form">
+            <p class="form-header">
+              Leave your contacts and we will call you back
+            </p>
+
+            <label>
+              Name
+              <input type="tel" name="phone" />
+            </label>
+
+            <label>
+              Phone
+              <input type="text" name="user_name" svg />use />
+            </label>
+
+            <label>
+              Email
+              <input type="email" name="email" />
+            </label>
+
+            <label>
+              Comment
+              <textarea
+                name="feedback"
+                rows="5"
+                placeholder="Text input"
+              ></textarea>
+            </label>
+
+            <label>
+              <input type="checkbox" name="policy" value="policy" />
+              I accept the terms and conditions of the
+              <a href="#">Privacy Policy</a>
+            </label>
+
+            <button type="submit">Send</button>
+          </form>
+        </div>
       </div>
     </div>
 

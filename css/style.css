@@ -34,6 +34,10 @@ a:not([class]) {
 img {
     display: block;
 }
+input:hover, input:focus{
+    border: 1px solid var(--hover-focus-color);
+    outline: none;
+}
 
 /* ----------------------------------------- */
 
@@ -318,7 +322,16 @@ body {
     fill: #ffffff;
 }
 
-
+.modal-window-form{
+    margin: 72px 24px 24px;
+}
+.form-header{
+    color: var(--titles-color);
+        text-align: center;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0.32px;
+}
 
 /* -----ITEMS--------- */
 
@@ -496,7 +509,6 @@ body {
 
 .footer-container {
     display: flex;
-    justify-content: flex-start;
     align-items: baseline;
 }
 
@@ -564,8 +576,9 @@ body {
 }
 
 .form-footer {
+    display: flex;
+    align-items: flex-end;
 }
-
 
 .label-subscribe {
     font-weight: 500;
@@ -573,25 +586,29 @@ body {
     letter-spacing: 0.02em;
 
 }
+
 .form-footer-input{
     margin-top: 16px;
-    margin-bottom: 24px;
+    margin-right: 24px;
     display: flex;
     width: 264px;
     height: 40px; 
-    padding: 8px 212px 8px 16px;
+    padding: 8px 16px;
     border-radius: 4px;
     border: 1px solid var(--bg-color);
     background-color: transparent;
+    color: var(--bg-color);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    outline: none;
 }
 
-input::placeholder{
+.form-footer-input::placeholder {
+    width: 100%;
+    box-sizing: border-box;
     color: var(--bg-color);
     font-size: 12px;
     line-height: 2;
     letter-spacing: 0.04em;
-    padding: 8px 212px 8px 16px 8px;
 }
 
 .form-button-footer {
@@ -614,21 +631,15 @@ input::placeholder{
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-button-footer:hover {
-    background-color: var(--hover-focus-color);
-}
-
+.form-button-footer:hover, 
 .form-button-footer:focus {
     background-color: var(--hover-focus-color);
 }
 
-.use-button-footer{
-}
-
 .form-footer-frame{
     fill: var(--bg-color);
+    height: 100%;
 }
-
 
 /* --------FILTER--------- */
 
@@ -689,11 +700,13 @@ input::placeholder{
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.cards-item-link:hover {
+.cards-item-link:hover,
+.cards-item-link:focus {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
         0px 1px 1px rgba(46, 47, 66, 0.16),
         0px 2px 1px rgba(46, 47, 66, 0.08);
 }
+
 
 .box {
     position: relative;
@@ -723,10 +736,10 @@ input::placeholder{
     height: 100%;
 }
 
-.cards-item:hover .overlay-p {
+.cards-item-link:hover .overlay-p,
+.cards-item-link:focus .overlay-p {
     transform: translateY(0%);
 }
-
 
 
 .frame {
