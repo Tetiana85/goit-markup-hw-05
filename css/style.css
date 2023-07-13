@@ -422,12 +422,13 @@ body {
     height: 16px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
+    margin-right: 8px;
     fill: transparent;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.checkbox-input {
-    
+.checkbox-span:hover,{
+    border-color:var(--hover-focus-color);
 }
 
 .privacy input[type="checkbox"]:checked +label span{
@@ -436,6 +437,9 @@ body {
     fill: var(--bg-color-team-footer);
 }
 
+.privacy input[type="checkbox"]:focus +label span{
+    border-color: var(--hover-focus-color);
+}
 
 .privacy-text {
     color: var(--btn-and-logo);
@@ -444,46 +448,6 @@ body {
 .send-button {
     margin-top: 24px;
 }
-/* .privacy{
-    display:flex;
-}
-
-.modal-form-checkbox{
-    display:flex;
-    
-}
-
-.checkbox {
-    display: flex;
-    margin-right: 8px;
-    cursor: pointer;
-    width: 16px;
-    height: 16px;
-    border-color: inherit;
- 
-}
-.checkbox-svg{
-    display:none;
-    cursor: pointer;
-    margin-right: 8px;
-    align-items: center;
-}
-
-.checkbox:checked{
-    display: none;
-}
-.checkbox:checked+.modal-form-checkbox .checkbox-svg {
-    display: inline-block;
-}
-
-.send-button{
-    margin: 24px auto 0;
-} */
-
-
-
-
-
 
 /* -----ITEMS--------- */
 
