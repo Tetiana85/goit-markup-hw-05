@@ -374,7 +374,11 @@ body {
 .form-input:hover+ .input-icon,
 .form-input:focus+ .input-icon
 {
-    fill: var(--hover-focus-color);
+    fill: var(--btn-and-logo);
+}
+
+.modal-form-textarea{
+    margin-bottom: 16px;
 }
 
 .textarea{
@@ -385,6 +389,7 @@ body {
     letter-spacing: 0.04em;
     color: rgba(46, 47, 66, 0.4);
     border: 1px solid rgba(46, 47, 66, 0.4);
+    outline: transparent;
     border-radius: 4px;
     background-color: transparent;
     resize: none;
@@ -397,20 +402,21 @@ body {
     color:var(--main-color);
 }
 
-.privacy{
+.privacy {
     margin-bottom: 24px;
 }
 
-.modal-form-checkbox{
+.modal-form-checkbox {
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: var(--customers);
 }
 
-.checkbox-span{
+.checkbox-span {
     display: inline-flex;
     align-items: center;
+    cursor: pointer;
     justify-content: center;
     width: 16px;
     height: 16px;
@@ -419,19 +425,23 @@ body {
     fill: transparent;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.checkbox-input{
 
+.checkbox-input {
+    
 }
-.checkbox-input:checked+ .checkbox-span{
+
+.privacy input[type="checkbox"]:checked +label span{
     background-color: var(--hover-focus-color);
     border: none;
     fill: var(--bg-color-team-footer);
 }
 
-.privacy-text{
+
+.privacy-text {
     color: var(--btn-and-logo);
 }
-.send-button{
+
+.send-button {
     margin-top: 24px;
 }
 /* .privacy{
@@ -753,7 +763,7 @@ body {
     height: 40px;
     justify-content: center;
     align-items: center;
-    font-family: Roboto;
+    font-family: "Roboto", sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
